@@ -1,7 +1,8 @@
 import { useState } from "react";
+import logo from '../Assets/wdbsa-logo.png';
 
 const Navbar = () => {
-    const [navbar, setNavbar] = useState(false);
+    const [navbar, setNavbar] = useState<boolean>(false);
 
     return (
         <nav className="w-full bg-white shadow">
@@ -9,7 +10,8 @@ const Navbar = () => {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold">LOGO</h2>
+                            {/* <h2 className="text-2xl font-bold">RHF</h2> */}
+                            <img src={logo} alt="wdbsa logo" height="70" width="70" />
                         </a>
                         <div className="md:hidden">
                             <button
