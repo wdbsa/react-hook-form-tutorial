@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from '../Assets/wdbsa-logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState<boolean>(false);
@@ -9,10 +10,10 @@ const Navbar = () => {
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="javascript:void(0)">
+                        <Link to={`/`}>
                             {/* <h2 className="text-2xl font-bold">RHF</h2> */}
                             <img src={logo} alt="wdbsa logo" height="70" width="70" />
-                        </a>
+                        </Link>
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -59,9 +60,9 @@ const Navbar = () => {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Home</a>
+                                <Link to={`/`}>Home</Link>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
+                            {/* <li className="text-gray-600 hover:text-blue-600">
                                 <a href="javascript:void(0)">Blog</a>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
@@ -69,7 +70,7 @@ const Navbar = () => {
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
                                 <a href="javascript:void(0)">Contact US</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

@@ -1,10 +1,20 @@
 import React from 'react';
-import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import ErrorPage from './Pages/ErrorPage';
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage /> 
+  }
+])
+
+const App = () => {
   return (
-    <div className="App">
-        <Navbar />
+    <div className="App container w-full h-full">
+        <RouterProvider router={router} />
     </div>
   );
 }
