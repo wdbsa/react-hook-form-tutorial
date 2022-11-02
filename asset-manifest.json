@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.687dad67.css",
-    "main.js": "/static/js/main.00a092be.js",
+    "main.css": "/static/css/main.384f0fb2.css",
+    "main.js": "/static/js/main.0cf68c08.js",
     "static/js/787.9a0a991b.chunk.js": "/static/js/787.9a0a991b.chunk.js",
     "static/media/wdbsa-logo.png": "/static/media/wdbsa-logo.7caf206c08b3a60d2e59.png",
     "index.html": "/index.html",
-    "main.687dad67.css.map": "/static/css/main.687dad67.css.map",
-    "main.00a092be.js.map": "/static/js/main.00a092be.js.map",
+    "main.384f0fb2.css.map": "/static/css/main.384f0fb2.css.map",
+    "main.0cf68c08.js.map": "/static/js/main.0cf68c08.js.map",
     "787.9a0a991b.chunk.js.map": "/static/js/787.9a0a991b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.687dad67.css",
-    "static/js/main.00a092be.js"
+    "static/css/main.384f0fb2.css",
+    "static/js/main.0cf68c08.js"
   ]
 }
