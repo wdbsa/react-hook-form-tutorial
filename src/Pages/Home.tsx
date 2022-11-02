@@ -47,7 +47,7 @@ const Home = () => {
                <label htmlFor="developer" className="text-white">Are you a developer?</label>
                <input {...register("developer")} id="developer" type="checkbox" value="yes" className="border-slate-200 p-2 my-3" />
 
-                <button className="btn text-white" type="submit">Submit</button>
+                <button className="btn bg-rose-800 px-4 py-3 mx-auto rounded-[10px] text-white" type="submit">Submit</button>
             </form>
         </div>
      );
