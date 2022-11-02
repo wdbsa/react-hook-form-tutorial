@@ -5,17 +5,18 @@ import * as yup from 'yup';
 
 
 interface FormValues {
+    mode: "onChange",
     name: string,
     age: number
 }
 
 let schema = yup.object().shape({
     name: yup.string().required(),
-    age: yup.number().required("not a number"),
+    age: yup.number().required()
 })
 
 const ProgressiveImprove = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({resolver: yupResolver(schema) });
+    const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormValues>({ resolver: yupResolver(schema) });
 
     console.log(errors);
 
@@ -23,16 +24,17 @@ const ProgressiveImprove = () => {
         <div className="container mx-auto w-full h-full">
             <Navbar />
             <div className="container w-full h-full m-4">
-                <form onSubmit={handleSubmit((e) => {
-                   console.log(e)
+                <form onSubmit={handleSubmit((data) => {
+                   console.log(data)
+                   reset();
                 })}
-                className="w-1/3 mx-auto text-white m-4 p-4 rounded-xl  bg-black flex flex-col items-center justify-center">
+                className="w-2/3 md:w-1/3  mx-auto text-white m-4 p-4 rounded-xl  bg-black flex flex-col items-center justify-center">
                     <h2>Progressive Improve</h2>
                     <input {...register("name") } placeholder="Name" className="p-2 m-4 w-80 text-black"/>
                     <p>{errors?.name?.message}</p>
                     <input {...register("age")} placeholder="Age" className="p-2 m-4 w-80 text-black" type="number" />
                     <p>{errors?.age?.message}</p>
-                    <button type="submit" className="bg-rose-800 py-3 px-4 rounded-xl mt-4">Submit</button>
+                    <button type="submit" className="bg-rose-800 py-3 px-4 rounded-xl mt-4" disabled={!isValid} >Submit</button>
                 </form> 
             </div>
         </div>
